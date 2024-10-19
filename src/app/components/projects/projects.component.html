@@ -1,5 +1,25 @@
 <app-navigation-bar />
+
 <div class="container mt-5">
-    <p>projects works!</p>
+    <!-- TODO: Design muss noch geändert werden -->
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Meine GitHub-Projekte</h1>
+            <div class="columns is-multiline">
+                <div class="column is-one-third" *ngFor="let repo of repositories">
+                    <div class="card">
+                        <div class="card-content">
+                            <p class="title">{{ repo.name }}</p>
+                            <p class="subtitle">{{ repo.description }}</p>
+                        </div>
+                        <footer class="card-footer">
+                            <a href="{{ repo.html_url }}" class="card-footer-item" target="_blank">Repository
+                                ansehen</a>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-<app-myfooter/>
+<app-myfooter />
