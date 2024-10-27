@@ -1,0 +1,13 @@
+<!-- education-path.component.html -->
+<div class="timeline is-centered">
+    <h1 class="title">My Education Path</h1>
+    <div *ngFor="let step of educationSteps" class="timeline-item">
+        <div class="timeline-marker is-info"></div>
+        <div class="timeline-content">
+            <p class="heading">{{ step.date }}</p>
+            <!-- <p class="title is-5">{{ step.degree }}</p> -->
+            <p class="subtitle is-6">{{ step.school }}</p>
+            <p *ngIf="step.description">{{ step.description }}</p>
+        </div>
+    </div>
+</div>

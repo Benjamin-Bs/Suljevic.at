@@ -12,6 +12,8 @@ import { MyfooterComponent } from './components/myfooter/myfooter.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { DonateComponent } from './components/donate/donate.component';
+import { EducationPathComponent } from './components/education-path/education-path.component';
+import { CarrerPathComponent } from './components/carrer-path/carrer-path.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { DonateComponent } from './components/donate/donate.component';
     MyfooterComponent,
     HomeComponent,
     ProjectsComponent,
-    DonateComponent
+    DonateComponent,
+    EducationPathComponent,
+    CarrerPathComponent
   ],
   imports: [
     BrowserModule,

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
 
+  isArticleVisible = true;
+
+  closeArticle(){
+    this.isArticleVisible = false;
+  }
+
 }
