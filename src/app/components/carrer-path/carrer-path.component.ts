@@ -14,7 +14,11 @@ export interface CarrerStep {
 export class CarrerPathComponent {
 
   carrerSteps: CarrerStep[] = [
-
+    {
+      company: '',
+      date: '',
+      description: ''
+    }
   ];
 
 }
