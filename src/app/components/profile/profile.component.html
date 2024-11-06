@@ -1,5 +1,5 @@
 <div class="container">
-    <h1 class="">Welcome to Suljevic.at</h1>
+    <h1 class="title">Welcome to Suljevic.at</h1>
 
     <article class="message" [ngClass]="{'is-hidden': !isArticleVisible}">
         <div class="message-header">
@@ -26,6 +26,11 @@
 
     <div>
         <app-donate />
+    </div>
+
+    <div class="mt-5">
+        <h1 class="subtitle">Progress for Suljevic.at</h1>
+        <progress class="progress is-info" value="5" max="100"></progress>
     </div>
 
 </div>

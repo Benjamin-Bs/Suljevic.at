@@ -14,6 +14,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { DonateComponent } from './components/donate/donate.component';
 import { EducationPathComponent } from './components/education-path/education-path.component';
 import { CarrerPathComponent } from './components/carrer-path/carrer-path.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CarrerPathComponent } from './components/carrer-path/carrer-path.compon
     ProjectsComponent,
     DonateComponent,
     EducationPathComponent,
-    CarrerPathComponent
+    CarrerPathComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

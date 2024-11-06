@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AboutMeComponent {
 
+    downloadFile(){
+      const filePath = '../../../assets/test.txt'
+
+      const link = document.createElement('a');
+      link.href = filePath;
+      link.download = 'test.txt'
+
+      link.click();
+    }
+
 }
