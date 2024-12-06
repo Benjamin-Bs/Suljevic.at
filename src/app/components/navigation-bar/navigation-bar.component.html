@@ -1,24 +1,23 @@
 <div>
-  <nav class="level has-background-info" style="padding: 20px;">
-      <p class="level-item has-text-centered">
-        <a class="link has-text-white" routerLink="/">Home</a>
-      </p>
-      <p class="level-item has-text-centered">
-        <a class="link has-text-white" routerLink="/about">About Me</a>
-      </p>
-      <p class="level-item has-text-centered">
-        <!-- TODO: Passende Größe für Logo machen -->
-        <img
-          src="../../../assets/Logo/Suljevic_Logo.png"
-          alt=""
-          style="height: 30px"
-        />
-      </p>
-      <p class="level-item has-text-centered">
-        <a class="link has-text-white" routerLink="/projects">Projects</a>
-      </p>
-      <p class="level-item has-text-centered">
-        <a class="link has-text-white" routerLink="/contact">Contact</a>
-      </p>
-    </nav>          
+  <nav class="level has-background-info"
+    style="padding: 20px; height: 70px; display: flex; justify-content: space-between; align-items: center;">
+    <p class="level-item has-text-centered">
+      <a class="link has-text-white" routerLink="/">Home</a>
+    </p>
+    <p class="level-item has-text-centered">
+      <a class="link has-text-white" routerLink="/about">About Me</a>
+    </p>
+
+    <!-- Logo Container -->
+    <div class="level-item has-text-centered" style="flex-grow: 1; display: flex; justify-content: center;">
+      <img src="../../../assets/Logo/Suljevic.png" alt="" style="height: 175px;" />
+    </div>
+
+    <p class="level-item has-text-centered">
+      <a class="link has-text-white" routerLink="/projects">Projects</a>
+    </p>
+    <p class="level-item has-text-centered">
+      <a class="link has-text-white" routerLink="/contact">Contact</a>
+    </p>
+  </nav>
 </div>

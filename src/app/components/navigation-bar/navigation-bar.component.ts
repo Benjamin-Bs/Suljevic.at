@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './navigation-bar.component.css'
 })
 export class NavigationBarComponent {
+
+  toggleBurgerMenu(): void {
+    const menu = document.querySelector('#navbarMenu') as HTMLElement;
+    menu.classList.toggle('is-active'); 
+  }
 
 }

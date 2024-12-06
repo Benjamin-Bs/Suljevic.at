@@ -1,8 +1,84 @@
-.navbar-background{
-    background-color: darkgrey;
-    color: rgb(228, 0, 0);
+/* Grundlegendes Styling für die Navbar */
+nav.level {
+    padding: 20px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.navbar-item{
-    color: blueviolet;
+/* Flexbox für die Navbar-Elemente */
+.level-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling der Links */
+.link {
+    font-size: 16px;
+    /* Schriftgröße */
+    text-decoration: none;
+    /* Keine Unterstreichung */
+    padding: 10px 15px;
+    /* Abstand um die Links */
+}
+
+/* Stil für das Logo */
+.level-item img {
+    height: 175px;
+    /* Standardgröße für das Logo */
+    width: auto;
+    /* Beibehaltung des Seitenverhältnisses */
+    max-height: 175px;
+    /* Maximale Höhe des Logos */
+    transition: height 0.3s ease;
+    /* Übergang für die Höhe */
+}
+
+/* Responsives Design: Wenn der Bildschirm kleiner wird */
+@media (max-width: 768px) {
+
+    /* Kleinere Höhe der Navbar auf mobilen Geräten */
+    nav.level {
+        height: 60px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /* Das Logo für kleine Bildschirme anpassen */
+    .level-item img {
+        height: 120px;
+        /* Kleinere Logo-Höhe */
+    }
+
+    /* Links in der Navbar vertikal anordnen */
+    .level-item {
+        flex-direction: column;
+        margin: 5px 0;
+    }
+
+    /* Reduziere die Schriftgröße der Links für kleine Bildschirme */
+    .link {
+        font-size: 14px;
+        padding: 8px 12px;
+        /* Weniger Padding */
+    }
+}
+
+/* Responsives Design für sehr kleine Bildschirme */
+@media (max-width: 480px) {
+
+    /* Logo weiter verkleinern auf sehr kleinen Bildschirmen */
+    .level-item img {
+        height: 100px;
+        /* Noch kleinere Logo-Höhe */
+    }
+
+    /* Die Links weiter anpassen */
+    .link {
+        font-size: 12px;
+        padding: 6px 10px;
+        /* Noch weniger Padding */
+    }
 }

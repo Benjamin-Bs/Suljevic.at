@@ -1,56 +1,65 @@
-<app-navigation-bar />
+<app-navigation-bar></app-navigation-bar>
+
 <div class="container mt-5">
+    <div class="columns is-vcentered is-multiline">
+        <!-- Bild -->
+        <div class="column is-12-mobile is-narrow-tablet is-flex is-justify-content-center">
+            <figure class="image is-128x128">
+                <img class="is-rounded" src="../../../assets/images/Original-11890034.jpg" />
+            </figure>
+        </div>
 
-    <div>
-        <figure class="image is-128x128">
-            <img class="is-rounded" src="https://bulma.io/assets/images/placeholders/128x128.png" />
-        </figure>
+        <!-- Text -->
+        <div class="column is-12-mobile is-8-tablet">
+            <h1 class="title">Hello</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et
+                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                amet,
+                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                erat,
+                sed diam voluptua. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+                consequat,
+                vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit
+                praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            </p>
+        </div>
     </div>
 
-    <div class="mt-5">
-        <h1 class="title"> Hello</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-            sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet.
-
-            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
-            feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
-            delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing
-            elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-            commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
-        </p>
+    <div class="columns is-multiline mt-5">
+        <div class="column is-12">
+            <h1 class="title">Career Path</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et
+                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure
+                dolor
+                in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+                vero
+                eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore
+                te
+                feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+                euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+            </p>
+        </div>
     </div>
 
-
-    <div class="mt-5">
-        <h1 class="title"> Carrer Path</h1>
-        <p> sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-            sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-            elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet.
-
-            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
-            feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
-            delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing
-            elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    <div class="columns is-multiline mt-5">
+        <div class="column is-12">
+            <app-education-path></app-education-path>
+        </div>
     </div>
 
-    <div class="mt-5">
-        <app-education-path />
+    <div class="columns is-multiline mt-5">
+        <div class="column is-12 is-flex is-justify-content-center">
+            <button class="button is-info" (click)="downloadFile()">Download Datei</button>
+        </div>
     </div>
-
-    <button class="button is-info mt-5" (click)="downloadFile()">Download Datei</button>
-
 </div>
 
-<app-myfooter />
+<app-myfooter></app-myfooter>
