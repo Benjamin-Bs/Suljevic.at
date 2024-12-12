@@ -13,9 +13,9 @@ import { MyfooterComponent } from './components/myfooter/myfooter.component';
 import { HomeComponent } from './components/home/home.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { DonateComponent } from './components/donate/donate.component';
-import { EducationPathComponent } from './components/education-path/education-path.component';
-import { CarrerPathComponent } from './components/carrer-path/carrer-path.component';
-import { ContactComponent } from './contact/contact.component';
+import { EducationPathComponent } from './components/about-me/education-path/education-path.component';
+import { CarrerPathComponent } from './components/about-me/carrer-path/carrer-path.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { TechnologiesComponent } from './components/projects/technologies/technologies.component';
 
 @NgModule({
