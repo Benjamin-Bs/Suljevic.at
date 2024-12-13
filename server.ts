@@ -17,17 +17,16 @@ export function app(): express.Express {
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
 
-  // Example Express Rest API endpoints
-  // server.get('/api/**', (req, res) => { });
   // Serve static files from /browser
   server.get('*.*', express.static(browserDistFolder, {
     maxAge: '1y'
   }));
 
-  // All regular routes use the Angular engine
+  // All regular routes use the Angular engine with CommonEngine
   server.get('*', (req, res, next) => {
     const { protocol, originalUrl, baseUrl, headers } = req;
 
+    // Render the SSR content using CommonEngine
     commonEngine
       .render({
         bootstrap: AppServerModule,
@@ -36,13 +35,14 @@ export function app(): express.Express {
         publicPath: browserDistFolder,
         providers: [{ provide: APP_BASE_HREF, useValue: baseUrl }],
       })
-      .then((html) => res.send(html))
-      .catch((err) => next(err));
+      .then((html) => res.send(html))  // Send the rendered HTML back to the client
+      .catch((err) => next(err));      // Pass errors to the next middleware if any
   });
 
   return server;
 }
 
+// Start the Express server
 function run(): void {
   const port = process.env['PORT'] || 4000;
 
