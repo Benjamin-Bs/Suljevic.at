@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NgxPayPalModule } from 'ngx-paypal';
 
 
@@ -18,30 +18,24 @@ import { CarrerPathComponent } from './components/about-me/carrer-path/carrer-pa
 import { ContactComponent } from './components/contact/contact.component';
 import { TechnologiesComponent } from './components/projects/technologies/technologies.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    NavigationBarComponent,
-    ProfileComponent,
-    AboutMeComponent,
-    MyfooterComponent,
-    HomeComponent,
-    ProjectsComponent,
-    DonateComponent,
-    EducationPathComponent,
-    CarrerPathComponent,
-    ContactComponent,
-    TechnologiesComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    NgxPayPalModule,
-  ],
-  providers: [
-    provideClientHydration()
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        NavigationBarComponent,
+        ProfileComponent,
+        AboutMeComponent,
+        MyfooterComponent,
+        HomeComponent,
+        ProjectsComponent,
+        DonateComponent,
+        EducationPathComponent,
+        CarrerPathComponent,
+        ContactComponent,
+        TechnologiesComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        NgxPayPalModule], providers: [
+        provideClientHydration(),
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
