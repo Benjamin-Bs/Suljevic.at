@@ -7,9 +7,10 @@ export interface CarrerStep {
 }
 
 @Component({
-  selector: 'app-carrer-path',
-  templateUrl: './carrer-path.component.html',
-  styleUrl: './carrer-path.component.css'
+    selector: 'app-carrer-path',
+    templateUrl: './carrer-path.component.html',
+    styleUrl: './carrer-path.component.css',
+    standalone: false
 })
 export class CarrerPathComponent {
 

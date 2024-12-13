@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NgxPayPalModule } from 'ngx-paypal';
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,10 +17,11 @@ import { CarrerPathComponent } from './components/about-me/carrer-path/carrer-pa
 import { ContactComponent } from './components/contact/contact.component';
 import { TechnologiesComponent } from './components/projects/technologies/technologies.component';
 
-@NgModule({ declarations: [
+@NgModule({
+    declarations: [
         AppComponent,
         NavigationBarComponent,
-        ProfileComponent,
+        ProfileComponent, 
         AboutMeComponent,
         MyfooterComponent,
         HomeComponent,
@@ -32,10 +32,14 @@ import { TechnologiesComponent } from './components/projects/technologies/techno
         ContactComponent,
         TechnologiesComponent
     ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
-        AppRoutingModule,
-        NgxPayPalModule], providers: [
-        provideClientHydration(),
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule
+    ],
+    providers: [
         provideHttpClient(withInterceptorsFromDi())
-    ] })
-export class AppModule { }
+        // Entfernen Sie dynamische Initialisierungen vorübergehend
+    ]
+})
+export class AppModule {}

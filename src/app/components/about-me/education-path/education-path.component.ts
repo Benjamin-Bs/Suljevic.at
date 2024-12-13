@@ -8,9 +8,10 @@ export interface EducationStep {
 }
 
 @Component({
-  selector: 'app-education-path',
-  templateUrl: './education-path.component.html',
-  styleUrl: './education-path.component.css'
+    selector: 'app-education-path',
+    templateUrl: './education-path.component.html',
+    styleUrl: './education-path.component.css',
+    standalone: false
 })
 export class EducationPathComponent {
 
