@@ -5,28 +5,33 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import AppServerModule from './src/main.server';
 
-// The Express app is exported so that it can be used by serverless Functions.
+// Die Express-App, die als Serverless-Funktion verwendet wird
 export function app(): express.Express {
   const server = express();
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
   const browserDistFolder = resolve(serverDistFolder, '../browser');
   const indexHtml = join(serverDistFolder, 'index.server.html');
 
+  // Initialisiere den CommonEngine
   const commonEngine = new CommonEngine();
 
+  // Setze die View-Engine auf HTML
   server.set('view engine', 'html');
   server.set('views', browserDistFolder);
 
-  // Serve static files from /browser
+  // Beispiel für die API-Endpunkte in Express
+  // server.get('/api/**', (req, res) => { });
+
+  // Statische Dateien aus dem /browser-Verzeichnis bereitstellen
   server.get('*.*', express.static(browserDistFolder, {
     maxAge: '1y'
   }));
 
-  // All regular routes use the Angular engine with CommonEngine
+  // Alle Routen werden durch CommonEngine verarbeitet
   server.get('*', (req, res, next) => {
     const { protocol, originalUrl, baseUrl, headers } = req;
 
-    // Render the SSR content using CommonEngine
+    // Rendern der SSR-Seite mit CommonEngine
     commonEngine
       .render({
         bootstrap: AppServerModule,
@@ -35,18 +40,18 @@ export function app(): express.Express {
         publicPath: browserDistFolder,
         providers: [{ provide: APP_BASE_HREF, useValue: baseUrl }],
       })
-      .then((html) => res.send(html))  // Send the rendered HTML back to the client
-      .catch((err) => next(err));      // Pass errors to the next middleware if any
+      .then((html) => res.send(html))  // HTML an den Client zurücksenden
+      .catch((err) => next(err));      // Fehler an die nächste Middleware weitergeben
   });
 
   return server;
 }
 
-// Start the Express server
+// Die Server-Funktion starten
 function run(): void {
   const port = process.env['PORT'] || 4000;
 
-  // Start up the Node server
+  // Starte den Express-Server
   const server = app();
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
