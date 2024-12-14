@@ -4,6 +4,7 @@ import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname, join, resolve } from 'path';
 import AppServerModule from './src/main.server';
+import { render } from '@netlify/angular-runtime/common-engine'
 
 export function app(): express.Express {
   const server = express();
@@ -45,6 +46,14 @@ function run(): void {
   server.listen(port, () => {
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
+}
+
+// For netlify
+// * https://github.com/netlify/angular-runtime?tab=readme-ov-file
+const commonEngine = new CommonEngine()
+
+export async function netlifyCommonEngineHandler(request: Request, context: any): Promise<Response> {
+  return await render(commonEngine)
 }
 
 run();

@@ -1,33 +1,36 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "declaration": false,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "ES2022",
-    "module": "ES2022",
-    "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "target": "ES2022",                            // Zielt auf die ES2022-Version von JavaScript ab
+    "module": "NodeNext",                            // Verwendung von ES-Modulen
+    "moduleResolution": "nodeNext",                // Auflösen von Modulen wie in modernen Node.js-Umgebungen
+    "lib": ["ES2022", "dom"],                      // Stellt ES2022- und DOM-Features zur Verfügung
+    "esModuleInterop": true,                       // Ermöglicht die Interoperabilität zwischen CommonJS und ES-Modulen
+    "skipLibCheck": true,                          // Überspringt die Typprüfung von Bibliotheken
+    "strict": true,                                // Aktiviert alle strengen Typüberprüfungen
+    "noImplicitAny": true,                         // Verhindert "any"-Typen, wenn nicht explizit definiert
+    "forceConsistentCasingInFileNames": true,      // Erzwingt konsistente Groß-/Kleinschreibung in Dateinamen
+    "noImplicitOverride": true,                    // Verhindert implizite Überschreibungen
+    "noPropertyAccessFromIndexSignature": true,    // Verhindert Zugriff auf Eigenschaften durch Index-Signaturen
+    "noImplicitReturns": true,                     // Verhindert Rückgabewerte ohne Rückgabewerttypen
+    "noFallthroughCasesInSwitch": true,            // Verhindert Fallthrough in Switch-Statements
+    "typeRoots": ["./node_modules/@types"], // Definiert benutzerdefinierte Typen und die node_modules-Typen
+    "declaration": false,                          // Deaktiviert die Generierung von .d.ts-Dateien
+    "experimentalDecorators": true,                // Aktiviert Experimentelle Dekoratoren (für Angular)
+    "sourceMap": true,                             // Erzeugt Sourcemaps
+    "importHelpers": true,                         // Verhindert das Duplizieren von Helferfunktionen
+    "useDefineForClassFields": false               // Verhindert die Verwendung von "define" bei Klassenfeldern
   },
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
-  }
+    "enableI18nLegacyMessageIdFormat": false,      // Verhindert das Legacy-Format für Übersetzungen
+    "strictInjectionParameters": true,              // Erzwingt strikte Typprüfung für Dependency Injection
+    "strictInputAccessModifiers": true,             // Erzwingt den Zugriff auf Eingabe-Modifier von Komponenten
+    "strictTemplates": true                         // Erzwingt strikte Typüberprüfung in Templates
+  },
+  "include": [
+    "src/**/*.ts",                                 // Schließt alle TypeScript-Dateien im src-Ordner ein
+    "src/**/*.d.ts"                                // Schließt alle Typdefinitionsdateien ein
+  ],
+  "exclude": [
+    "node_modules"                                 // Schließt den node_modules-Ordner aus
+  ]
 }
