@@ -6,7 +6,8 @@
         <div class="container">
             <h1 class="title">Meine GitHub-Projekte</h1>
             <div class="columns is-multiline">
-                <div class="column is-one-third" *ngFor="let repo of repositories">
+                <!-- Nur die sichtbaren Repositories anzeigen -->
+                <div class="column is-one-third" *ngFor="let repo of repositories | slice:0:visibleCount">
                     <div class="card">
                         <div class="card-content">
                             <p class="title">{{ repo.name }}</p>
@@ -19,17 +20,27 @@
                     </div>
                 </div>
             </div>
+            <!-- Button, um mehr anzuzeigen -->
+            <div class="is-flex is-justify-content-center mt-4">
+                <button class="button is-info" (click)="showMore()" *ngIf="visibleCount < repositories.length">
+                    Show more
+                </button>
+            </div>
         </div>
     </section>
 </div>
+
+
 
 <div class="container mt-5">
     <h1 class="title">Technologies</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, eveniet. Necessitatibus, commodi quasi! Aut
         repellat maxime deserunt odit voluptatem, nesciunt explicabo voluptatibus aperiam, eos rerum esse temporibus
         doloribus doloremque error.</p>
+
+    <diV class="mt-5">
+        <app-technologies />
+    </diV>
 </div>
-
-
 
 <app-myfooter />

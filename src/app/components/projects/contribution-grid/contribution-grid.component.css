@@ -1,0 +1,17 @@
+.calendar {
+    display: flex;
+    flex-direction: row;
+}
+
+.week {
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+}
+
+.day {
+    width: 12px;
+    height: 12px;
+    margin: 1px;
+    border-radius: 3px;
+}

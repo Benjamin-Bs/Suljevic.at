@@ -11,7 +11,6 @@ export class TechnologiesComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
 
-
   }
 
 }

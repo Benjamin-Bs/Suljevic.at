@@ -1,0 +1,24 @@
+.icon-container {
+    padding: 20px;
+    /* Abstände innen */
+    border-radius: 10px;
+    /* Abgerundete Ecken */
+    transition: all 0.3s ease;
+    /* Sanfte Übergänge */
+}
+
+.icon-container:hover {
+    background-color: #f0f0f0;
+    /* Hintergrund ändert sich bei Hover */
+    transform: scale(1.1);
+    /* Skalieren bei Hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Schatten bei Hover */
+}
+
+.icon-container i {
+    font-size: 60px;
+    /* Icon-Größe */
+    color: #333;
+    /* Icon-Farbe */
+}
