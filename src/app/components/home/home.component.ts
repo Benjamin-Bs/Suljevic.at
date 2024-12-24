@@ -8,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+    isArticleVisible: boolean = false;
+
+    toggleArticleVisibility() {
+        this.isArticleVisible = !this.isArticleVisible;
+    }
+
+    closeArticle() {
+        this.isArticleVisible = false;
+    }
+
 }

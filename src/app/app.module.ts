@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module.js';
 import { AppComponent } from './app.component.js';
 import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component.js';
-import { ProfileComponent } from './components/profile/profile.component.js';
 import { AboutMeComponent } from './components/about-me/about-me.component.js';
 import { MyfooterComponent } from './components/myfooter/myfooter.component.js';
 import { HomeComponent } from './components/home/home.component.js';
@@ -19,12 +18,13 @@ import { CarrerPathComponent } from './components/about-me/carrer-path/carrer-pa
 import { ContactComponent } from './components/contact/contact.component.js';
 import { TechnologiesComponent } from './components/projects/technologies/technologies.component.js';
 import { ContributionGridComponent } from './components/projects/contribution-grid/contribution-grid.component.js';
+import { AgePipe } from './pipes/age.pipe.js';
+import { FeedbackComponent } from './components/contact/feedback/feedback.component.js';
 
 @NgModule({
     declarations: [
         AppComponent,
         NavigationBarComponent,
-        ProfileComponent, 
         AboutMeComponent,
         MyfooterComponent,
         HomeComponent,
@@ -34,7 +34,9 @@ import { ContributionGridComponent } from './components/projects/contribution-gr
         CarrerPathComponent,
         ContactComponent,
         TechnologiesComponent,
-        ContributionGridComponent
+        ContributionGridComponent,
+        AgePipe,
+        FeedbackComponent
     ],
     bootstrap: [AppComponent],
     imports: [
@@ -46,4 +48,4 @@ import { ContributionGridComponent } from './components/projects/contribution-gr
         provideHttpClient(withInterceptorsFromDi())
     ]
 })
-export class AppModule {}
+export class AppModule { }

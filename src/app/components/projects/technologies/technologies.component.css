@@ -22,3 +22,25 @@
     color: #333;
     /* Icon-Farbe */
 }
+
+/* Swiper */
+.swiper {
+    width: 100%;
+    height: auto;
+
+    .swiper-wrapper {
+        display: flex;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon-container {
+        font-size: 2rem;
+        height: 100px;
+        width: 100%;
+    }
+}
