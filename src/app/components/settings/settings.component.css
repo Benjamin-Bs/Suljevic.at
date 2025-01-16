@@ -1,0 +1,43 @@
+/* Floating Button */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  /* Overlay-Panel */
+  .overlay-panel {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Startposition außerhalb des Viewports */
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: right 0.3s ease; /* Animation beim Ein- und Ausklappen */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .overlay-panel.is-active {
+    right: 0; /* Panel wird eingeblendet */
+  }
+  
+  /* Panel Header */
+  .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .panel-content {
+    padding: 1rem;
+    overflow-y: auto; /* Falls der Inhalt zu groß wird */
+  }
+  

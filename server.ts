@@ -5,8 +5,6 @@ import { fileURLToPath } from 'url';
 import { dirname, join, resolve } from 'path';
 import AppServerModule from './src/main.server';
 import { render } from '@netlify/angular-runtime/common-engine'
-// const netlifyCommonEngine = await import('@netlify/angular-runtime/common-engine');
-// const render = netlifyCommonEngine.render;
 
 
 export function app(): express.Express {

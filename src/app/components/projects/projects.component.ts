@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GithubService } from '../../services/github.service.js';
+import { GithubService } from '../../services/github/github.service.js';
 
 @Component({
     selector: 'app-projects',

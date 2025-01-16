@@ -1,0 +1,27 @@
+<!-- Floating Action Button -->
+<button class="button is-info is-rounde floating-button" (click)="togglePanel()">
+    <span class="icon is-small">
+        <i class="material-icons">settings</i>
+    </span>
+</button>
+
+<!-- Aufklapp-Panel -->
+<div class="overlay-panel" [ngClass]="{ 'is-active': isPanelOpen }">
+    <div class="panel-header">
+        <button class="delete" aria-label="close" (click)="togglePanel()"></button>
+        <h3 class="title is-4">Customizer</h3>
+    </div>
+    <div class="panel-content">
+        <p>Hier könnten Optionen stehen (z. B. Farben, Einstellungen etc.).</p>
+
+        <!-- TODO: Color Changer -->
+
+        <!-- TODO: Langauge  -->
+        <div class="select is-link">
+            <select>
+                <option>Select dropdown</option>
+                <option>With options</option>
+            </select>
+        </div>
+    </div>
+</div>
