@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { NgxPayPalModule } from 'ngx-paypal';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,6 +24,10 @@ import { ContributionGridComponent } from './components/projects/contribution-gr
 import { AgePipe } from './pipes/age.pipe';
 import { FeedbackComponent } from './components/contact/feedback/feedback.component';
 import { SettingsComponent } from './components/settings/settings.component';
+
+export function HttpLoaderFactory(http: HttpClient) {
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
     declarations: [
@@ -44,6 +51,13 @@ import { SettingsComponent } from './components/settings/settings.component';
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        }),
         AppRoutingModule
     ],
     providers: [

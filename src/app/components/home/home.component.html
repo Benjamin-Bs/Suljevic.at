@@ -8,29 +8,8 @@
         Hier finden Sie nicht nur meine GitHub-Projekte, sondern auch eine kurze Vorstellung meiner Person sowie meines
         Werdegangs.</p>
 
-    <button class="button is-info" (click)="toggleArticleVisibility()">
-        Show Articles
-    </button>
-
-    <article class="message" [ngClass]="{ 'is-hidden': !isArticleVisible }">
-        <div class="message-header">
-            <p>Hello World</p>
-            <button class="delete" aria-label="delete" (click)="closeArticle()"></button>
-        </div>
-        <div class="message-body" [ngStyle]="{
-          'max-height': isArticleVisible ? '500px' : '0',
-          overflow: 'hidden'
-        }">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec
-            nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus
-            diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac
-            <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-            sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a
-            neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
-        </div>
-    </article>
-
+        
+        
     <div class="skeleton-lines">
         <div></div>
         <div></div>
