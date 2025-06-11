@@ -5,6 +5,8 @@ nav.level {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    position: relative;
 }
 
 /* Flexbox für die Navbar-Elemente */
@@ -17,68 +19,82 @@ nav.level {
 /* Styling der Links */
 .link {
     font-size: 16px;
-    /* Schriftgröße */
     text-decoration: none;
-    /* Keine Unterstreichung */
     padding: 10px 15px;
-    /* Abstand um die Links */
 }
 
 /* Stil für das Logo */
 .level-item img {
     height: 175px;
-    /* Standardgröße für das Logo */
     width: auto;
-    /* Beibehaltung des Seitenverhältnisses */
     max-height: 175px;
-    /* Maximale Höhe des Logos */
     transition: height 0.3s ease;
-    /* Übergang für die Höhe */
+}
+
+/* zentriertes Logo */
+.logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: auto;
+}
+
+/* --------------------------------------------
+   Desktop-Only Anpassung: mehr Abstand links/rechts
+--------------------------------------------- */
+@media (min-width: 1024px) {
+    nav.level {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .level {
+        gap: 2rem;
+    }
 }
 
 /* Responsives Design: Wenn der Bildschirm kleiner wird */
 @media (max-width: 768px) {
-
-    /* Kleinere Höhe der Navbar auf mobilen Geräten */
     nav.level {
-        height: 60px;
+        height: auto;
         flex-direction: column;
         justify-content: center;
     }
 
-    /* Das Logo für kleine Bildschirme anpassen */
-    .level-item img {
-        height: 120px;
-        /* Kleinere Logo-Höhe */
-    }
-
-    /* Links in der Navbar vertikal anordnen */
     .level-item {
         flex-direction: column;
         margin: 5px 0;
     }
 
-    /* Reduziere die Schriftgröße der Links für kleine Bildschirme */
+    .level-item img {
+        height: 120px;
+    }
+
     .link {
         font-size: 14px;
         padding: 8px 12px;
-        /* Weniger Padding */
+    }
+
+    .logo-center {
+        position: static;
+        transform: none;
+        margin: 10px 0;
     }
 }
 
 /* Responsives Design für sehr kleine Bildschirme */
 @media (max-width: 480px) {
-
-    /* Logo weiter verkleinern auf sehr kleinen Bildschirmen */
     .level-item img {
         height: 100px;
-        /* Noch kleinere Logo-Höhe */
     }
 
-    /* Die Links weiter anpassen */
     .link {
         font-size: 12px;
         padding: 6px 10px;
-        /* Noch weniger Padding */
     }
+}
+
+.navbar-link{
+    text-decoration: underline;
+    
 }

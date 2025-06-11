@@ -11,7 +11,7 @@
 <div class="overlay-panel has-text-centered" [ngClass]="{ 'is-active': isPanelOpen }">
     <div class="panel-header">
         <button class="delete" aria-label="close" (click)="togglePanel()"></button>
-        <h3 class="title is-4">Customizer</h3>
+        <h3 class="title is-4" style="color: black;">Customizer</h3>
     </div>
     <div class="panel-content">
         <p>Hier könnten Optionen stehen (z. B. Farben, Einstellungen etc.).</p>
@@ -19,12 +19,15 @@
         <!-- TODO: Color Changer -->
 
         
+        
         <!-- TODO: Langauge  -->
         <div class="select is-link">
             <select>
                 <option>Select Language</option>
-                <option>With options</option>
-                <option>...</option>
+                <option>Englisch</option>
+                <option>Deutsch</option>
+                <option>Französisch</option>
+                <option>Spanisch</option>
             </select>
         </div>
 

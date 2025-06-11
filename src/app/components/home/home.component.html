@@ -1,4 +1,4 @@
-<app-navigation-bar />
+<app-navigation-bar aria-label="Navigation" />
 
 <div class="container">
     <h1 class="title">Welcome to Suljevic.at</h1>
@@ -9,27 +9,27 @@
         Werdegangs.</p>
 
         
-        
-    <div class="skeleton-lines">
+
+    <!-- <div class="skeleton-lines">
         <div></div>
         <div></div>
         <div></div>
         <div></div>
         <div></div>
+    </div> -->
+
+    <div>
+        <app-donate aria-label="Donation Button" />
     </div>
 
     <div>
-        <app-donate />
-    </div>
-
-    <div>
-        <app-settings />
+        <app-settings aria-label="settings" />
     </div>
 
     <div class="mt-5">
         <h1 class="subtitle">Progress for Suljevic.at</h1>
-        <progress class="progress is-info" value="15" max="100"></progress>
+        <progress class="progress is-info" value="20" max="100"></progress>
     </div>
 </div>
 
-<app-myfooter />
+<app-myfooter aria-label="Footer"/>

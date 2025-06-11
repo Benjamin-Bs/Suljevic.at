@@ -20,10 +20,10 @@ import { EducationPathComponent } from './components/about-me/education-path/edu
 import { CarrerPathComponent } from './components/about-me/carrer-path/carrer-path.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { TechnologiesComponent } from './components/projects/technologies/technologies.component';
-import { ContributionGridComponent } from './components/projects/contribution-grid/contribution-grid.component';
 import { AgePipe } from './pipes/age.pipe';
 import { FeedbackComponent } from './components/contact/feedback/feedback.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { ChangeLanguageComponent } from './components/settings/change-language/change-language.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -42,10 +42,10 @@ export function HttpLoaderFactory(http: HttpClient) {
         CarrerPathComponent,
         ContactComponent,
         TechnologiesComponent,
-        ContributionGridComponent,
         AgePipe,
         FeedbackComponent,
-        SettingsComponent
+        SettingsComponent,
+        ChangeLanguageComponent
     ],
     bootstrap: [AppComponent],
     imports: [
@@ -56,7 +56,8 @@ export function HttpLoaderFactory(http: HttpClient) {
                 provide: TranslateLoader,
                 useFactory: HttpLoaderFactory,
                 deps: [HttpClient]
-            }
+            },
+            defaultLanguage: 'en'
         }),
         AppRoutingModule
     ],

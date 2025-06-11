@@ -1,24 +1,46 @@
-<div>
-  <nav class="level has-background-info"
-    style="padding: 20px; height: 70px; display: flex; justify-content: space-between; align-items: center;">
-    <p class="level-item has-text-centered">
-      <a class="link has-text-white" routerLink="/">Home</a>
-    </p>
-    <p class="level-item has-text-centered">
-      <a class="link has-text-white" routerLink="/about">About Me</a>
-    </p>
+<nav class="navbar is-info" role="navigation" aria-label="main navigation">
+  <!-- Mobile: Burger & Logo -->
+  <div class="navbar-brand">
+    <a routerLink="/" class="navbar-item is-hidden-desktop">
+      <img src="../../../assets/Logo/suljevic.svg" alt="Logo" style="height: 40px;" />
+    </a>
 
-    <!-- Logo Container -->
-     <!--scale the svg directly and customize margins-->
+    <!-- Burger Menu Button -->
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" (click)="toggleMenu()"
+      [ngClass]="{'is-active': menuOpen}">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <!-- Desktop Navbar -->
+  <div class="navbar-menu is-active is-hidden-touch is-fullwidth">
+    <div class="navbar-start">
+      <a class="navbar-item has-text-white" routerLink="/">Home</a>
+      <a class="navbar-item has-text-white" routerLink="/about">About Me</a>
+    </div>
+
+    <!-- Logo zentriert auf Desktop -->
+    <div class="navbar-item logo-center">
       <a routerLink="/">
-        <img src="../../../assets/Logo/suljevic.svg" style="scale: 40%; margin: 5px 0 10px;" alt="suljevic.at Logo"/>
+        <img src="../../../assets/Logo/suljevic.svg" alt="Logo" style="height: 40px;" />
       </a>
+    </div>
 
-    <p class="level-item has-text-centered">
-      <a class="link has-text-white" routerLink="/projects">Projects</a>
-    </p>
-    <p class="level-item has-text-centered">
-      <a class="link has-text-white" routerLink="/contact">Contact</a>
-    </p>
-  </nav>
-</div>
+    <div class="navbar-end">
+      <a class="navbar-item has-text-white" routerLink="/projects">Projects</a>
+      <a class="navbar-item has-text-white" routerLink="/contact">Contact</a>
+    </div>
+  </div>
+
+  <!-- Mobile Navbar Links -->
+  <div class="navbar-menu is-hidden-desktop" [ngClass]="{'is-active': menuOpen}" aria-label="mobile navigation">
+    <div class="navbar-start is-flex is-flex-direction-column">
+      <a class="navbar-item has-text-white" routerLink="/" (click)="closeMenu()">Home</a>
+      <a class="navbar-item has-text-white" routerLink="/about" (click)="closeMenu()">About Me</a>
+      <a class="navbar-item has-text-white" routerLink="/projects" (click)="closeMenu()">Projects</a>
+      <a class="navbar-item has-text-white" routerLink="/contact" (click)="closeMenu()">Contact</a>
+    </div>
+  </div>
+</nav>

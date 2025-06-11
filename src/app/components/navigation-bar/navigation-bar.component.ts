@@ -8,9 +8,13 @@ import { Component, ViewChild } from '@angular/core';
 })
 export class NavigationBarComponent {
 
-  toggleBurgerMenu(): void {
-    const menu = document.querySelector('#navbarMenu') as HTMLElement;
-    menu.classList.toggle('is-active'); 
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
   }
 
+  closeMenu() {
+    this.menuOpen = false;
+  }
 }
