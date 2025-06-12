@@ -98,3 +98,26 @@ nav.level {
     text-decoration: underline;
     
 }
+
+/* Weißer Hover-Unterstrich für Links */
+.navbar-item.has-text-white:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+/* Desktop: Abstand zu den Seiten */
+@media (min-width: 1024px) {
+  .navbar-menu.is-hidden-touch.is-fullwidth {
+    padding: 0 40px;
+  }
+
+  .navbar-start,
+  .navbar-end {
+    gap: 1rem;
+  }
+
+    /* Zentriertes Logo auf Desktop */
+  .logo-center {
+    margin: 0 2rem;
+  }
+}
